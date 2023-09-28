@@ -8,7 +8,7 @@ export const ChannelDetails = () => {
   const {id} = useParams()
   const [channelDetail, setChannelDetail] = useState(null)
   const [videos, setVideos] = useState([])
-  console.log(channelDetail, videos)
+ 
 useEffect(() => {
   fetchVideos(`channels?part=snippet&id=${id}`).then((data) => {
     setChannelDetail(data.items[0])

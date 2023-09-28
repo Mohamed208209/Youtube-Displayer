@@ -12,7 +12,7 @@ export const VideoDetails = () => {
   const [videoDetail, setVideoDetail] = useState<null | video>(null);
   const [videos, setVideos] = useState<null | video[]>(null)
   const { id } = useParams();
-  console.log(videoDetail)
+ 
    
    useEffect(() => {
      fetchVideos(`videos?part=snippet,statistics&id=${id}`).then((data) => {

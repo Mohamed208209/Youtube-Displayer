@@ -10,7 +10,7 @@ import { Loader } from "./Loader"
 export const SearchFeed = () => {
   const [videos, setVideos] = useState<video[] | channelDetail[]>([])
   const { searchTerm } = useParams()
-  console.log(videos)
+  
 
   useEffect(() => {
     fetchVideos(`search?part=snippet&q=${searchTerm}`)
